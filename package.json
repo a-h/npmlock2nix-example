@@ -1,0 +1,12 @@
+{
+  "name": "npmlock2nix-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Build step running...\""
+  },
+  "author": "",
+  "license": "ISC"
+}
