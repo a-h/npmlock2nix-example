@@ -1,2 +1,4 @@
 #!/bin/bash
-node index.js
+cd "$(dirname "$0")"
+SCRIPT_DIR="$(pwd)"
+node $SCRIPT_DIR/index.js

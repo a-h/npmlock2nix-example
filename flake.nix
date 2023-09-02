@@ -21,18 +21,21 @@
     {
       packages = forAllSystems ({ pkgs }: {
         default = pkgs.buildNpmPackage {
-          name = "buildNpmPackage-example";
+          name = "zero-to-nix-javascript";
 
           buildInputs = with pkgs; [
             nodejs-18_x
           ];
 
           src = ./.;
-          npmDepsHash = "sha256-o8ZcUbUhR2OH3gGRZwKtHfc8FllbG/QZ84T0Kivz8qM=";
+
+          npmBuild = "npm run build";
+
+          npmDepsHash = "sha256-s1Kze9LuYSDVxm1jxMG1yoGCYVRBsnwJ0Zi0NcT5lzg=";
 
           installPhase = ''
             mkdir -p $out
-            cp index.js $out/index.js
+            cp dist/* $out
             cp hello.sh $out/hello
             chmod +x $out/hello
           '';
